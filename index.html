@@ -8,9 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
 
     <!-- #4 #sweat out the styles by creating an #external css -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="jaeho.css" />
 
-    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 <!-- #4 #one #page -->
@@ -23,30 +24,31 @@
 
     <!-- #3 #channels #list is much better, than headlines or paragraphs... -->
     <ul>
-        <li>#Yummy
+        <li onclick="document.getElementById('change-channel').innerHTML='#Yummy by upgrading.never.helps'; document.getElementById('filledstar').src='http://ip.lfe.mw.tum.de/sections/star-o.png';">#Yummy
             <!-- #3 #channels #favorite this is not starred -->
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
         </li>
 
         <!-- #4 #channel is #highlighted -->
-        <li class="selected">
+        <li class="selected" onclick="document.getElementById('change-channel').innerHTML='#SevenContinents by upgrading.never.helps'; document.getElementById('filledstar').src='http://ip.lfe.mw.tum.de/sections/star-o.png'; ">
             #SevenContinents
             <!-- #3 #channels #favorite this is starred -->
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
         </li>
-        <li>#KillerApp
+        <li onclick="document.getElementById('change-channel').innerHTML='#KillerApp by upgrading.never.helps'; document.getElementById('filledstar').src='http://ip.lfe.mw.tum.de/sections/star-o.png';  ">#KillerApp
             <!-- #3 #channels #favorite this is not starred -->
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
         </li>
-        <li>#FirstPersonOnMars
+        <li onclick="document.getElementById('change-channel').innerHTML='#FirstPersonOnMars by upgrading.never.helps'; document.getElementById('filledstar').src='http://ip.lfe.mw.tum.de/sections/star-o.png';">#FirstPersonOnMars 
             <!-- #3 #channels #favorite this is starred -->
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
         </li>
-        <li>#Octoberfest
+        <li onclick="document.getElementById('change-channel').innerHTML='#Octoberfest by upgrading.never.helps'; document.getElementById('filledstar').src='http://ip.lfe.mw.tum.de/sections/star-o.png';">#Octoberfest
             <!-- #3 #channels #favorite this is not starred -->
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
         </li>
     </ul>
+  
 
     <!-- #3 #tab-bar #container -->
     <!-- #4 #sweat #tab-bar -->
@@ -73,10 +75,12 @@
 <!-- #4 #one #page -->
 <div id="chat">
     <h1>
-        #SevenContinents
+        <div id="change-channel">#SevenContinents</div>
         <small>by
             <strong>cheeses.yard.applies</strong>
         </small>
+       <img id="filledstar" src="http://ip.lfe.mw.tum.de/sections/star.png"
+   alt="filled star image";  onclick="document.getElementById('filledstar').src='http://ip.lfe.mw.tum.de/sections/star.png';">
     </h1>
 
     <!-- #3 #chat #container -->
@@ -169,7 +173,11 @@
         <p>北京</p>
         <button>+5 min.</button>
     </div>
-</div>
-
+    <div id="chat-bar"><button id="emojis-button" onclick="showemojis();"><img 
+        src="http://ip.lfe.mw.tum.de/sections/smile-o.png">
+        </button><div id="emojis">&#x1F601; &#x1F602; &#x1F603;
+         &#x1F604; &#x1F605;</div>
+    </div>
+    
 </body>
 </html>
